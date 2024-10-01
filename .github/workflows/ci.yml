@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         terraform_dirs: ${{ fromJson(needs.get-working-directories.outputs.terraform_dirs) }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4 # Checks out the code
       - name: Install Conftest # Installs the policy as code tool -> conftest
